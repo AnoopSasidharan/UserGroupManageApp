@@ -1,0 +1,15 @@
+<div>
+  <div class="card" *ngFor="let group of groups">
+    <div>
+      <h4 class="card-title">{{group.name}}</h4>
+      <div class="card-body">
+        <div *ngFor="let user of group.users">
+          <div class="row m-1 border border-primary">
+            <h5 class="card-subtitle mb-2 col-9 ">{{user.name}}</h5>
+            <button class="btn btn-primary col-3" (click)="editUser(user)">Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
