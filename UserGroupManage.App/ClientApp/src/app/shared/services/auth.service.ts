@@ -17,8 +17,8 @@ export class AuthService {
   isLoggedIn(): boolean {
     return this.user != null && !this.user.expired;
   }
-  getClaims(): any {
-    return this.user?.profile;
+  GetUserRole(): string {
+    return this.user?.profile["role"];
   }
   getAuthorizationHeaderValue(): string {
     return `${this.user?.token_type} ${this.user?.access_token}`;
@@ -40,6 +40,18 @@ export class AuthService {
       return null;
     }
   }
+
+  getScopes(): string[] {
+    return this.user.scopes;
+  }
+
+  get AdminUser(): boolean {
+    return this.GetUserRole() === "Admin";
+  }
+  get HelpdeskUser(): boolean {
+    return this.GetUserRole() === "Helpdesk";
+  }
+
 }
 
 export function getClientSettings(): UserManagerSettings {

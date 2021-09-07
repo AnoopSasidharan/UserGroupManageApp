@@ -1,0 +1,13 @@
+<section>
+  <div class="row">
+    <h4>{{group.name}}</h4>
+  </div>
+  <div class="row">
+    {{group.description}}
+  </div>
+  <div style="margin-left:5px;" *ngFor="let user of group.users">
+    <div class="row">
+      {{user.name}}
+    </div>
+  </div>
+</section>

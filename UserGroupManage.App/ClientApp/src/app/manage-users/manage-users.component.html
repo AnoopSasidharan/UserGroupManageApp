@@ -1,0 +1,18 @@
+<section>
+  <div class="border-primary">
+    <form [formGroup]="searchForm" (ngSubmit)="searchUsers()">
+      <div class="row">
+        <input class="col-auto mb-1" type="text" formControlName="searchText" />
+        <button type="submit" class="btn btn-primary mb-2">Search</button>
+      </div>
+    </form>
+  </div>
+  <div>
+    <div class="row" *ngFor="let user of users">
+      <div class="col">{{user.name}}</div>
+      <button class="col btn btn-primary">Details</button>
+      <button class="col btn btn-primary" [routerLink]="['/edituser',user.id]">Edit</button>
+      <button class="col btn btn-danger" (click)="deleteUser(user)">Delete</button>
+    </div>
+  </div>
+</section>

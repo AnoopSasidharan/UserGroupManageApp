@@ -1,0 +1,19 @@
+<section>
+  <div class="border-primary">
+    <form [formGroup]="searchForm" (ngSubmit)="searchGroups()">
+      <div class="row">
+        <input class="col-auto mb-1" type="text" formControlName="searchText"/>
+        <button type="submit" class="btn btn-primary mb-2">Search</button>
+      </div>
+    </form>
+  </div>
+  <div>
+    <div class="row" *ngFor="let group of groups">
+      <div class="col">{{group.name}}</div>
+      <div class="col">{{group.description}}</div>
+      <button class="col btn btn-primary">Details</button>
+      <button class="col btn btn-primary" [routerLink]="['/editgroup',group.id]">Edit</button>
+      <button class="col btn btn-danger" (click)="deleteGroup(group)">Delete</button>
+    </div>
+  </div>
+</section>
