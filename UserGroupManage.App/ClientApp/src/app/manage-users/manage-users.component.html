@@ -8,11 +8,11 @@
     </form>
   </div>
   <div>
-    <div class="row" *ngFor="let user of users">
-      <div class="col">{{user.name}}</div>
-      <button class="col btn btn-primary">Details</button>
-      <button class="col btn btn-primary" [routerLink]="['/edituser',user.id]">Edit</button>
-      <button class="col btn btn-danger" (click)="deleteUser(user)">Delete</button>
+    <div class="form-group" *ngFor="let user of users">
+      <div class="col">{{user.firstName}}</div>
+      <button class="btn btn-primary">Details</button>
+      <button class="btn btn-primary" [routerLink]="['/edituser',user.id]">Edit</button>
+      <button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
     </div>
   </div>
 </section>

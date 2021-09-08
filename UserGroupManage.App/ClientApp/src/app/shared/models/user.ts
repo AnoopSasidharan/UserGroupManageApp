@@ -1,13 +1,13 @@
 export class User {
   id: number;
-  name: string;
-  userTypeId?: number;
-  createdById?: number;
-  updatedById: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
 
   constructor() {
     this.id = 0;
-    this.name = ``;
-    this.updatedById = 0;
+    this.firstName = ``;
+    this.lastName = ``;
   }
 }

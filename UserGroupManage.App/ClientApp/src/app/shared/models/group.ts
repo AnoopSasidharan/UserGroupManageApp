@@ -4,8 +4,6 @@ export class Group {
   id?: number;
   name: string;
   description: string;
-  createdById?: number;
-  updatedById?: number;
   users: User[];
 
   constructor() {
