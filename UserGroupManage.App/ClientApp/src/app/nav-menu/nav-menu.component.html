@@ -29,8 +29,11 @@
           <li *ngIf="authService.AdminUser || authService.HelpdeskUser" class="nav-item" [routerLinkActive]="['link-active']">
             <a class="nav-link text-white" [routerLink]="['/manageusers']">Manage User</a>
           </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-white" [routerLink]="['/fetc']">Register User</a>
+          <li *ngIf="authService.AdminUser || authService.HelpdeskUser" class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-white" [routerLink]="['/adduser']">Add User</a>
+          </li>
+          <li *ngIf="authService.AdminUser || authService.HelpdeskUser" class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-white" [routerLink]="['/addgroup']">Add Group</a>
           </li>
         </ul>
       </div>

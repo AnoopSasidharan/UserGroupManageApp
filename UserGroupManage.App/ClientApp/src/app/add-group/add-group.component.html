@@ -1,0 +1,22 @@
+<section>
+  <header>
+    <h3>Add New User</h3>
+  </header>
+  <div class="border-primary">
+    <form [formGroup]="groupForm" (ngSubmit)="addGroup()">
+      <div class="row">
+        <label for="groupName" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="groupName" formControlName="Name">
+        </div>
+      </div>
+      <div class="row">
+        <label for="groupDescription" class="col-sm-2 col-form-label">Description</label>
+        <div class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="groupDescription" formControlName="Description" >
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">Save</button>
+    </form>
+  </div>
+</section>

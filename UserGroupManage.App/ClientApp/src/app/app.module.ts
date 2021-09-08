@@ -15,6 +15,8 @@ import { EditGroupComponent } from './edit-group/edit-group.component';
 import { ManageGroupsComponent } from './manage-groups/manage-groups.component';
 import { ManageUsersComponent } from './manage-users/manage-users.component';
 import { InterceptorService } from './shared/services/interceptor.service';
+import { AddUserComponent } from './add-user/add-user.component';
+import { AddGroupComponent } from './add-group/add-group.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { InterceptorService } from './shared/services/interceptor.service';
     EditUserComponent,
     EditGroupComponent,
     ManageGroupsComponent,
-    ManageUsersComponent
+    ManageUsersComponent,
+    AddUserComponent,
+    AddGroupComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

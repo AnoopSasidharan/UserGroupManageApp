@@ -9,6 +9,8 @@ import { ManageGroupsComponent } from './manage-groups/manage-groups.component';
 import { ManageUsersComponent } from './manage-users/manage-users.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { EditGroupComponent } from './edit-group/edit-group.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { AddGroupComponent } from './add-group/add-group.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [AuthGuardService] },
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'managegroups', component: ManageGroupsComponent },
   { path: 'edituser/:id', component: EditUserComponent },
   { path: 'editgroup/:id', component: EditGroupComponent },
+  { path: 'adduser', component: AddUserComponent },
+  { path: 'addgroup', component: AddGroupComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
 ];

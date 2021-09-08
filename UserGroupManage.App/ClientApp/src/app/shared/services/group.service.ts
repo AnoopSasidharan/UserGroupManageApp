@@ -2,6 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
+import { Creategroup } from '../models/creategroup';
 import { Group } from '../models/group';
 import { Groupsearchparams } from '../models/groupsearchparams';
 
@@ -34,8 +35,8 @@ export class GroupService {
 
     return this.httpClient.get(`${this.serviceUrl}api/groups`, { params: _params });
   }
-  createGroup(group: Group): Observable<any> {
-    return this.httpClient.post<Group>(`${this.serviceUrl}api/groups`, group);
+  createGroup(group: Creategroup): Observable<any> {
+    return this.httpClient.post<Creategroup>(`${this.serviceUrl}api/groups`, group);
   }
   getGroupById(id: number): Observable<any> {
     return this.httpClient.get(`${this.serviceUrl}api/groups/${id}`);
