@@ -24,6 +24,7 @@ export class AddGroupComponent implements OnInit {
       description : this.groupForm.get(`Description`)?.value,
       name : this.groupForm.get(`Name`)?.value,
     }
+    console.log(newGroup);
     this.groupService.createGroup(newGroup).subscribe(
       data => {
         console.log(data);
